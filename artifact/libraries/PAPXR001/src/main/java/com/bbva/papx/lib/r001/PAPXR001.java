@@ -10,7 +10,7 @@ public interface PAPXR001 {
 	/**
 	 * The execute method...
 	 */
-	CustomerDTO	executeGetCustomer(String customerId);
-
+/*	CustomerDTO	executeGetCustomer(String customerId);*/
+	String executeHolaMundo(String name);
 	void execute();
 }

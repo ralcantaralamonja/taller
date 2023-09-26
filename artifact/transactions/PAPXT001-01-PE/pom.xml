@@ -54,11 +54,6 @@
 			<groupId>com.bbva.papx.dto.customer</groupId>
 			<artifactId>PAPXC001</artifactId>
 			<version>0.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.bbva.papx.dto.customer</groupId>
-			<artifactId>PAPXC001</artifactId>
-			<version>0.0.0</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>

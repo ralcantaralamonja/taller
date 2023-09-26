@@ -10,7 +10,11 @@ import com.bbva.papx.lib.r001.PAPXR001;
 public abstract class PAPXR001Abstract extends AbstractLibrary implements PAPXR001 {
 
 	protected ApplicationConfigurationService applicationConfigurationService;
+	protected PAPXR001 papxr001;
 
+	public void setPapxr001(PAPXR001 papxr001) {
+		this.papxr001 = papxr001;
+	}
 
 	/**
 	* @param applicationConfigurationService the this.applicationConfigurationService to set

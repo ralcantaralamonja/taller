@@ -1,7 +1,6 @@
 package com.bbva.papx;
 
 import com.bbva.elara.transaction.AbstractTransaction;
-import com.bbva.papx.dto.customer.CustomerDTO;
 
 /**
  * In this class, the input and output data is defined automatically through the setters and getters.
@@ -13,16 +12,16 @@ public abstract class AbstractPAPXT00101PETransaction extends AbstractTransactio
 
 
 	/**
-	 * Return value for input parameter customerId
+	 * Return value for input parameter name
 	 */
-	protected String getCustomerid(){
-		return (String)this.getParameter("customerId");
+	protected String getName(){
+		return (String)this.getParameter("name");
 	}
 
 	/**
-	 * Set value for CustomerDTO output parameter customer
+	 * Set value for String output parameter saludo
 	 */
-	protected void setCustomer(final CustomerDTO field){
-		this.addParameter("customer", field);
+	protected void setSaludo(final String field){
+		this.addParameter("saludo", field);
 	}
 }

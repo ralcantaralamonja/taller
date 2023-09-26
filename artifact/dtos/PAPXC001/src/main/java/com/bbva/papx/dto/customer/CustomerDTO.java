@@ -2,52 +2,41 @@ package com.bbva.papx.dto.customer;
 
 import java.io.Serializable;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 /**
  * The CustomerDTO class...
  */
 public class CustomerDTO implements Serializable  {
 	private static final long serialVersionUID = 2931699728946643245L;
-	private String customerId;
-	private String firstName;
-	private String lastName;
+
+	private String greeating;
+	private String name;
 	public CustomerDTO(){
 		super();
 	}
 
-	public String getCustomerId() {
-		return customerId;
+
+
+	public String getGreeating() {
+		return greeating;
 	}
 
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
+	public void setGreeating(String greeating) {
+		this.greeating = greeating;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
 		return "CustomerDTO{" +
-				"customerId='" + customerId + '\'' +
-				", firstName='" + firstName + '\'' +
-				", lastName='" + lastName + '\'' +
+				", firstName='" + greeating + '\'' +
+				", lastName='" + name + '\'' +
 				'}';
 	}
 }
