@@ -2,6 +2,7 @@ package com.bbva.papx.lib.r001.impl;
 
 import com.bbva.elara.configuration.manager.application.ApplicationConfigurationService;
 import com.bbva.elara.library.AbstractLibrary;
+import com.bbva.elara.utility.jdbc.JdbcUtils;
 import com.bbva.papx.lib.r001.PAPXR001;
 
 /**
@@ -10,11 +11,9 @@ import com.bbva.papx.lib.r001.PAPXR001;
 public abstract class PAPXR001Abstract extends AbstractLibrary implements PAPXR001 {
 
 	protected ApplicationConfigurationService applicationConfigurationService;
-	protected PAPXR001 papxr001;
 
-	public void setPapxr001(PAPXR001 papxr001) {
-		this.papxr001 = papxr001;
-	}
+	protected JdbcUtils jdbcUtils;
+
 
 	/**
 	* @param applicationConfigurationService the this.applicationConfigurationService to set
@@ -22,5 +21,13 @@ public abstract class PAPXR001Abstract extends AbstractLibrary implements PAPXR0
 	public void setApplicationConfigurationService(ApplicationConfigurationService applicationConfigurationService) {
 		this.applicationConfigurationService = applicationConfigurationService;
 	}
+
+	/**
+	* @param jdbcUtils the this.jdbcUtils to set
+	*/
+	public void setJdbcUtils(JdbcUtils jdbcUtils) {
+		this.jdbcUtils = jdbcUtils;
+	}
+
 
 }

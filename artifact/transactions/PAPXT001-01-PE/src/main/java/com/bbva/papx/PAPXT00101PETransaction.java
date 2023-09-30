@@ -7,6 +7,8 @@ import com.bbva.papx.lib.r001.PAPXR001;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
 /**
  * Transaction to get a Customer
  *
@@ -20,9 +22,13 @@ public class PAPXT00101PETransaction extends AbstractPAPXT00101PETransaction {
 	 */
 	@Override
 	public void execute() {
+		CustomerDTO  cliente =  new CustomerDTO();
+		cliente.setName(this.getName());
 		PAPXR001 papxR001 = this.getServiceLibrary(PAPXR001.class);
-		String nombre = this.getName();
-		String s = papxR001.executeHolaMundo(nombre);
+
+		String s = papxR001.executeIngresarCustomer(cliente);
+		List<String>  q = papxR001.executeLeerCustomer();
+		this.setNombres(q);
 		this.setSaludo(s);
 		this.setSeverity(Severity.OK);
 		this.setHttpResponseCode(HttpResponseCode.HTTP_CODE_200);

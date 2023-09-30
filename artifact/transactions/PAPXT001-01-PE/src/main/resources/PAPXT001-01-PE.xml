@@ -5,6 +5,9 @@
 	</paramsIn>
 	<paramsOut>
 		<parameter order="1" name="saludo" mandatory="1" type="String" size="50"/>
+		<list order="2" name="nombres" mandatory="1">
+			<parameter order="1" name="Type" mandatory="0" type="String" size="50"/>
+		</list>
 	</paramsOut>
 	<description>Transaction to get a Customer</description>
 </transaction>

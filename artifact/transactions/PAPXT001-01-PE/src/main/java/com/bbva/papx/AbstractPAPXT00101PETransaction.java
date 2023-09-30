@@ -1,6 +1,7 @@
 package com.bbva.papx;
 
 import com.bbva.elara.transaction.AbstractTransaction;
+import java.util.List;
 
 /**
  * In this class, the input and output data is defined automatically through the setters and getters.
@@ -23,5 +24,12 @@ public abstract class AbstractPAPXT00101PETransaction extends AbstractTransactio
 	 */
 	protected void setSaludo(final String field){
 		this.addParameter("saludo", field);
+	}
+
+	/**
+	 * Set value for List<String> output parameter nombres
+	 */
+	protected void setNombres(final List<String> field){
+		this.addParameter("nombres", field);
 	}
 }
